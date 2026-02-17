@@ -1,0 +1,25 @@
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Ankit-Gupta-TSS/centralized-config-repo.git
+          default-label: main
+          clone-on-start: true
+
+
+server:
+  port: 8071
+
+encrypt:
+  key: A8fK29sLmPqX7vTzY4nR6uWcBjHdEoQs
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
